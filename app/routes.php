@@ -13,5 +13,20 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
+});
+
+Route::get('/lorem', function()
+{
+	$generator = new Badcow\LoremIpsum\Generator();
+	$paragraphs = $generator->getParagraphs(Input::get('paragraphs'));
+	
+	return View::make('lorem');
+});
+
+Route::get('/users', function()
+{
+	$user = Faker\Factory::create();
+
+	return View::make('users');
 });
