@@ -20,7 +20,7 @@ Route::post('lorem', function()
 {
 	$number = Input::post('paragraphs');
 	$generator = new Badcow\LoremIpsum\Generator();
-	$paragraphs = $generator->getParagraphs($number => );
+	$paragraphs = $generator->getParagraphs($number);
 	
 	return View::make('lorem', $paragraphs);
 });
