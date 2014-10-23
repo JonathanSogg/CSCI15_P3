@@ -8,5 +8,7 @@
 		{{ Form::submit('Generate!') }}
 	{{ Form::close() }}
 	<br />
-	{{ implode('<p>', $paragraphs) }}
+	@if ($paragraphs)
+		{{ implode('<p>', $paragraphs) }}
+	@endif
 @stop
