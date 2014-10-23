@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('index');
 });
 
-Route::get('/lorem', function()
+Route::get('lorem', function()
 {
 	$generator = new Badcow\LoremIpsum\Generator();
 	$paragraphs = $generator->getParagraphs(Input::get('paragraphs'));
@@ -24,7 +24,7 @@ Route::get('/lorem', function()
 	return View::make('lorem');
 });
 
-Route::get('/users', function()
+Route::get('users', function()
 {
 	$user = Faker\Factory::create();
 
