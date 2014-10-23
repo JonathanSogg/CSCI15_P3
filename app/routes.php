@@ -18,7 +18,8 @@ Route::get('/', function()
 
 Route::get('lorem', function()
 {
-	return View::make('lorem');
+	$paragraphs = 0;
+	return View::make('lorem', $paragraphs);
 });
 
 Route::post('lorem', function()
