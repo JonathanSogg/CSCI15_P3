@@ -16,6 +16,11 @@ Route::get('/', function()
 	return View::make('index');
 });
 
+Route::get('lorem', function()
+{
+	return View::make('lorem');
+});
+
 Route::post('lorem', function()
 {
 	$number = Input::post('paragraphs');
