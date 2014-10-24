@@ -26,5 +26,6 @@
 				<br />
 			@endif
 		@endfor
+		<br />
 	@endif
 @stop
