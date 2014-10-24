@@ -40,16 +40,16 @@ Route::post('users', function()
 	$user = Faker\Factory::create();
 	
 	$userno = Input::get('userno');
-	$addr = false;	
+	$bd = false;	
 	$bio = false;
 
-	if (Input::get('addr') == true)
-		$addr = true;
+	if (Input::get('bd') == true)
+		$bd = true;
 	
 	if (Input::get('bio') == true)
 		$bio = true;
 	
-	$flags = array('userno'=>$userno, 'addr'=>$addr, 'bio'=>$bio);
+	$flags = array('userno'=>$userno, 'bd'=>$bd, 'bio'=>$bio);
 
 	return View::make('users')->with('user', $user)->with('flags', $flags);
 });

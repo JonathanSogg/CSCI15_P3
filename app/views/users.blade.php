@@ -7,8 +7,8 @@
 		{{ Form::text('userno', '1') }}
 		{{ Form::label('AddressBox', 'Address?') }}
 		{{ Form::checkbox('address', 'address') }}
-		{{ Form::label('BioBox', 'Bio?') }}
-		{{ Form::checkbox('bio', 'bio') }}
+		{{ Form::label('BdBox', 'Birthdate?') }}
+		{{ Form::checkbox('bd', 'bd') }}
 		{{ Form::submit('Generate!') }}
 	{{ Form::close() }}
 	<br />
@@ -16,14 +16,14 @@
 		@for ($i=0; $i<$flags['userno']; $i++)
 		        {{ $user->name }}
 			<br />
-			@if ($flags['addr'] == true)
-				{{ $user->address, "\n" }}
-				</br>
+			@if ($flags['bd'] == true)
+				{{ $user->date($format = 'Y-m-d', $max = 'now') }}
+				<br />
 			@endif
 
 			@if ($flags['bio'] == true)
-				{{ $user->text, "\n" }}
-				</br>
+				{{ $user->text}}
+				<br />
 			@endif
 		@endfor
 	@endif
