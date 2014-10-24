@@ -10,6 +10,6 @@
 	<div class="content">
 	@yield('content')
 	</div>
-	<a href="{{ url('/') }}">Home</a>
+	<h3><a href="{{ url('/') }}">Home</a></h3>
 </body>
 </html>
