@@ -41,11 +41,9 @@ Route::post('users', function()
 	
 	if (Input::get('addr') == true)
 		$addr = 'addr';
-	endif
-
+	
 	if (Input::get('bio') == true)
 		$bio = 'bio';
-	endif
 
 	return View::make('users')->with('user', array($user, $addr, $bio));
 });
