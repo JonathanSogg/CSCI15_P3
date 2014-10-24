@@ -18,8 +18,7 @@ Route::get('/', function()
 
 Route::get('lorem', function()
 {
-	$paragraphs = 0;
-	return View::make('lorem', $paragraphs);
+	return View::make('lorem');
 });
 
 Route::post('lorem', function()
@@ -28,7 +27,7 @@ Route::post('lorem', function()
 	$generator = new Badcow\LoremIpsum\Generator();
 	$paragraphs = $generator->getParagraphs($number);
 	
-	return View::make('lorem', $paragraphs);
+	return View::make('lorem')->with('paragraphs', $paragraphs);
 });
 
 Route::post('users', function()
