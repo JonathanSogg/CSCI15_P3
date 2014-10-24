@@ -1,7 +1,7 @@
 @extends('base')
 	
 @section('content')
-	<p>This is the user generator. Speficy how many users you want and if they should have birthdates and/or bios</p>
+	<p>This is the user generator. Specify how many users you want and if they should have birthdates and/or bios</p>
 	{{ Form::open(array('url' => 'users')) }}
 		{{ Form::label('UserBox', 'Number of Users') }}
 		{{ Form::text('userno', '1') }}
@@ -14,7 +14,7 @@
 	<br />
 	@if (isset($user))
 		@for ($i=0; $i<$flags['userno']; $i++)
-		        {{ $user->name }}
+		        {{ <b>$user->name</b> }}
 			<br />
 			@if ($flags['bd'] == true)
 				{{ $user->date($format = 'Y-m-d', $max = 'now') }}
@@ -22,10 +22,8 @@
 			@endif
 
 			@if ($flags['bio'] == true)
-				{{ $user->text}}
-				<br />
+				{{ <style>margin-bottom:10px</style>-<i>$user->text</i> }}
 			@endif
 		@endfor
-		<br />
 	@endif
 @stop
