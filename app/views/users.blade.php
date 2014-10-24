@@ -13,13 +13,13 @@
 	{{ Form::close() }}
 	<br />
 	@if (isset($user))
-		@for ($i=0; $i<$userno; $i++)
+		@for ($i=0; $i<$flags.userno; $i++)
 			{{ $user->name }}
-			@if ($addr == true)
+			@if ($flags.addr == true)
 				{{ $user->address }}
 			@endif
 
-			@if ($bio == true)
+			@if ($flags.bio == true)
 				{{ $user->text }}
 			@endif
 		@endfor

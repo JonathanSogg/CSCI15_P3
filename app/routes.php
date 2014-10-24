@@ -48,6 +48,8 @@ Route::post('users', function()
 	
 	if (Input::get('bio') == true)
 		$bio = true;
+	
+	$flags = array($userno, $addr, $bio);
 
-	return View::make('users')->with('user', $user)->with('userNo', $userno)->with('addr',$addr)->with('bio', $bio);
+	return View::make('users', $user)->with($flags);
 });
