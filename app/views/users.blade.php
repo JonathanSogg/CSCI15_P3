@@ -4,11 +4,11 @@
 	<p>This is the user generator. Specify how many users you want and if they should have birthdates and/or bios</p>
 	{{ Form::open(array('url' => 'users')) }}
 		{{ Form::label('UserBox', 'Number of Users') }}
-		{{ Form::text('userno', '1') }}
-		{{ Form::label('BdBox', 'Birthdaye?') }}
-		{{ Form::checkbox('bd', 'bd') }}
+		{{ Form::text('userno', $flags['userno']) }}
+		{{ Form::label('BdBox', 'Birthday?') }}
+		{{ Form::checkbox('bd', $flags['bd']) }}
 		{{ Form::label('BioBox', 'Bio?') }}
-		{{ Form::checkbox('bio', 'bio') }}
+		{{ Form::checkbox('bio', $flags['bio']) }}
 		{{ Form::submit('Generate!') }}
 	{{ Form::close() }}
 	<br />
