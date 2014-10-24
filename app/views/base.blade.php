@@ -8,5 +8,6 @@
 	<div class="content">
 	@yield('content')
 	</div>
+	<a href="{{ url('/') }}">Home</a>
 </body>
 </html>
