@@ -14,7 +14,7 @@
 	<br />
 	@if (isset($user))
 		@for ($i=0; $i<$flags['userno']; $i++)
-		        {{ <b>$user->name</b> }}
+		        <b>{{ $user->name }}</b>
 			<br />
 			@if ($flags['bd'] == true)
 				{{ $user->date($format = 'Y-m-d', $max = 'now') }}
@@ -22,7 +22,7 @@
 			@endif
 
 			@if ($flags['bio'] == true)
-				{{ <style>margin-bottom:10px</style>-<i>$user->text</i> }}
+				<i style>margin-bottom:10px>{{ -<i>$user->text }}</i>
 			@endif
 		@endfor
 	@endif
