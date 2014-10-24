@@ -23,6 +23,7 @@
 
 			@if ($flags['bio'] == true)
 				<i style='margin-bottom:10px'>{{ $user->text }}</i>
+				<br />
 			@endif
 		@endfor
 	@endif
