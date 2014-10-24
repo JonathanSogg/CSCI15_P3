@@ -22,7 +22,7 @@
 			@endif
 
 			@if ($flags['bio'] == true)
-				<i style>margin-bottom:10px>{{ -<i>$user->text }}</i>
+				<i style>margin-bottom:10px>{{ $user->text }}</i>
 			@endif
 		@endfor
 	@endif
