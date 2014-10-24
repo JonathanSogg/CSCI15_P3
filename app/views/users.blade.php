@@ -1,7 +1,7 @@
 @extends('base')
 	
 @section('content')
-	<p>This is my page, we're good for now. Forms go underneath.</p>
+	<p>This is the user generator. Speficy how many users you want and if they should have birthdates and/or bios</p>
 	{{ Form::open(array('url' => 'users')) }}
 		{{ Form::label('UserBox', 'Number of Users') }}
 		{{ Form::text('userno', '1') }}
