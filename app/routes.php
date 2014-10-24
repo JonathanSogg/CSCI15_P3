@@ -18,9 +18,7 @@ Route::get('/', function()
 
 Route::get('lorem', function()
 {
-	$number = array('number'=>1);
-	
-	return View::make('lorem')->with('number', $number);
+	return View::make('lorem');
 });
 
 Route::post('lorem', function()
