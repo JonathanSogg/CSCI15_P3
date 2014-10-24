@@ -30,9 +30,14 @@ Route::post('lorem', function()
 	return View::make('lorem')->with('paragraphs', $paragraphs);
 });
 
+Route::get('users', function()
+{
+	return View::make('users');
+});
+
 Route::post('users', function()
 {
 	$user = Faker\Factory::create();
 
-	return View::make('users');
+	return View::make('users')->with('user', $user);
 });
