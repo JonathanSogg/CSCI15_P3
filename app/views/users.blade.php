@@ -14,13 +14,16 @@
 	<br />
 	@if (isset($user))
 		@for ($i=0; $i<$flags['userno']; $i++)
-			{{ $user->name, "\n" }}
+		        {{ $user->name }}
+			<br />
 			@if ($flags['addr'] == true)
 				{{ $user->address, "\n" }}
+				</br>
 			@endif
 
 			@if ($flags['bio'] == true)
 				{{ $user->text, "\n" }}
+				</br>
 			@endif
 		@endfor
 	@endif
