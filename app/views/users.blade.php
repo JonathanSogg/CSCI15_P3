@@ -4,10 +4,10 @@
 	<p>This is my page, we're good for now. Forms go underneath.</p>
 	{{ Form::open(array('url' => 'users')) }}
 		{{ Form::label('Number of users', 'Users') }}
-		{{ Form::number('userno', '1') }}
-		{{ Form::label('Address?', 'Address') }}
+		{{ Form::text('userno', '1') }}
+		{{ Form::label('AddressBox', 'Address?') }}
 		{{ Form::checkbox('address', 'address') }}
-		{{ Form::label('Bio?', 'Bio') }}
+		{{ Form::label('BioBox', 'Bio?') }}
 		{{ Form::checkbox('bio', 'bio') }}
 		{{ Form::submit('Generate!') }}
 	{{ Form::close() }}
