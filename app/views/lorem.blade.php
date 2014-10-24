@@ -1,7 +1,7 @@
 @extends('base')
 	
 @section('content')
-	<p>This is my page, we're good for now. Forms go underneath.</p>
+	<p>This is the Lorem Ipsum generator. Specify the number of paragraphs you want and click "Generate"</p>
 	{{ Form::open(array('url' => 'lorem')) }}
 		{{ Form::label('paragraphs', 'Paragraphs') }}
 		{{ Form::text('paragraphs', '1') }}
