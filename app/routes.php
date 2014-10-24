@@ -20,7 +20,7 @@ Route::get('lorem', function()
 {
 	$number = 1;
 	
-	return View::make('lorem')->with('paras', $number);
+	return View::make('lorem')->with('number', $number);
 });
 
 Route::post('lorem', function()
@@ -29,7 +29,7 @@ Route::post('lorem', function()
 	$generator = new Badcow\LoremIpsum\Generator();
 	$paragraphs = $generator->getParagraphs($number);
 	
-	return View::make('lorem')->with('paragraphs', $paragraphs)->with('paras', $number);
+	return View::make('lorem')->with('paragraphs', $paragraphs)->with('number', $number);
 });
 
 Route::get('users', function()
