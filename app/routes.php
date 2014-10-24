@@ -39,7 +39,7 @@ Route::post('users', function()
 {
 	$user = Faker\Factory::create();
 	
-	$users = Input::get('users');
+	$userno = Input::get('userno');
 	$addr = false;	
 	$bio = false;
 
@@ -49,5 +49,5 @@ Route::post('users', function()
 	if (Input::get('bio') == true)
 		$bio = true;
 
-	return View::make('users')->with('user', array($user, $users, $addr, $bio));
+	return View::make('users')->with('user', array($user, $userno, $addr, $bio));
 });

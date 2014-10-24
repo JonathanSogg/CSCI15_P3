@@ -4,7 +4,7 @@
 	<p>This is my page, we're good for now. Forms go underneath.</p>
 	{{ Form::open(array('url' => 'users')) }}
 		{{ Form::label('Number of users', 'Users') }}
-		{{ Form::number('users', '1') }}
+		{{ Form::number('userno', '1') }}
 		{{ Form::label('Address?', 'Address') }}
 		{{ Form::checkbox('address', 'address') }}
 		{{ Form::label('Bio?', 'Bio') }}
@@ -13,7 +13,7 @@
 	{{ Form::close() }}
 	<br />
 	@if (isset($user))
-		@for ($i=0; $i<$users; $i++)
+		@for ($i=0; $i<$userno; $i++)
 			{{ $user->name }}
 			@if ($addr == true)
 				{{ $user->address }}
