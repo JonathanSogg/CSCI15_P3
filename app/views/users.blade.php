@@ -5,10 +5,10 @@
 	{{ Form::open(array('url' => 'users')) }}
 		{{ Form::label('UserBox', 'Number of Users') }}
 		{{ Form::text('userno', '1') }}
-		{{ Form::label('AddressBox', 'Address?') }}
-		{{ Form::checkbox('address', 'address') }}
-		{{ Form::label('BdBox', 'Birthdate?') }}
+		{{ Form::label('BdBox', 'Birthdaye?') }}
 		{{ Form::checkbox('bd', 'bd') }}
+		{{ Form::label('BioBox', 'Bio?') }}
+		{{ Form::checkbox('bio', 'bio') }}
 		{{ Form::submit('Generate!') }}
 	{{ Form::close() }}
 	<br />
