@@ -51,5 +51,5 @@ Route::post('users', function()
 	
 	$flags = array($userno, $addr, $bio);
 
-	return View::make('users', $user)->with($flags);
+	return View::make('users')->with($user)->with($flags);
 });
