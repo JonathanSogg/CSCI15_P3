@@ -49,7 +49,7 @@ Route::post('users', function()
 	if (Input::get('bio') == true)
 		$bio = true;
 	
-	$flags = array($userno, $addr, $bio);
+	$flags = array('userno'=>$userno, 'addr'=>$addr, 'bio'=>$bio);
 
 	return View::make('users')->with('user', $user)->with('flags', $flags);
 });
