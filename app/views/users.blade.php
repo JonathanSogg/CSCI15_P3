@@ -15,11 +15,11 @@
 	@if (isset($user))
 		@for ($i=0; $i<users; $i++)
 			{{ $user->name }}
-			@if (isset($addr))
+			@if ($addr == true)
 				{{ $user->address }}
 			@endif
 
-			@if (isset($bio))
+			@if ($bio == true)
 				{{ $user->text }}
 			@endif
 		@endfor
