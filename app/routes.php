@@ -38,6 +38,14 @@ Route::get('users', function()
 Route::post('users', function()
 {
 	$user = Faker\Factory::create();
+	
+	if (Input::get('addr') == true)
+		$addr = 'addr';
+	endif
 
-	return View::make('users')->with('user', $user);
+	if (Input::get('bio') == true)
+		$bio = 'bio';
+	endif;
+
+	return View::make('users')->with('user', array($user, $addr, $bio));
 });
