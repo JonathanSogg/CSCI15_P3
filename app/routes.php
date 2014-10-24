@@ -23,7 +23,7 @@ Route::get('lorem', function()
 
 Route::post('lorem', function()
 {
-	$number = Input::post('paragraphs');
+	$number = Input::get('paragraphs');
 	$generator = new Badcow\LoremIpsum\Generator();
 	$paragraphs = $generator->getParagraphs($number);
 	
