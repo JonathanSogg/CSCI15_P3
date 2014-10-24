@@ -49,5 +49,5 @@ Route::post('users', function()
 	if (Input::get('bio') == true)
 		$bio = true;
 
-	return View::make('users')->with('user', array($user, $userno, $addr, $bio));
+	return View::make('users', compact($user, $userno, $addr, $bio));
 });
