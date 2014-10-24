@@ -27,7 +27,7 @@ Route::post('lorem', function()
 	$generator = new Badcow\LoremIpsum\Generator();
 	$paragraphs = $generator->getParagraphs($number);
 	
-	return View::make('lorem')->with('paragraphs', $paragraphs);
+	return View::make('lorem')->with('paragraphs', $paragraphs)->with('paras', $number);
 });
 
 Route::get('users', function()
