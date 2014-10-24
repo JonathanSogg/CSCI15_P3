@@ -18,7 +18,9 @@ Route::get('/', function()
 
 Route::get('lorem', function()
 {
-	return View::make('lorem');
+	$number = 1;
+	
+	return View::make('lorem')->with('paras', $number);
 });
 
 Route::post('lorem', function()
@@ -32,7 +34,12 @@ Route::post('lorem', function()
 
 Route::get('users', function()
 {
-	return View::make('users');
+	$userno = 1;
+	$bd = false;
+	$bio = false;
+	
+	$flags = array('userno'=>$userno, 'bd'=>$bd, 'bio'=>$bio);
+	return View::make('users')->with('flags', $flags);
 });
 
 Route::post('users', function()
